@@ -35,6 +35,7 @@ public class MovePlayer : MonoBehaviour
             float jumpVelocity = 12.0f;
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
             Debug.Log("Jump");
+            animator.SetBool("IsGrounded", false);
             IsGrounded = false;
         }
         
@@ -46,6 +47,7 @@ public class MovePlayer : MonoBehaviour
         {
             IsGrounded = true;
             Debug.Log("IsGrounded");
+            animator.SetBool("IsGrounded", true);
         }
     }
 }

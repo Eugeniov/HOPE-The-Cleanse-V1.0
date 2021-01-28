@@ -39,6 +39,14 @@ public class MovePlayer : MonoBehaviour
             IsGrounded = false;
         }
         
+        if (IsGrounded == true && Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            animator.SetBool("glissade", true);
+        }
+        if (IsGrounded == true && Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            animator.SetBool("glissade", false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

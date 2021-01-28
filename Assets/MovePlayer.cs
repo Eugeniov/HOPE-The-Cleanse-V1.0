@@ -32,7 +32,7 @@ public class MovePlayer : MonoBehaviour
 
         if(IsGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            float jumpVelocity = 10.0f;
+            float jumpVelocity = 12.0f;
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
             Debug.Log("Jump");
             IsGrounded = false;

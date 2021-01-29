@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1020002604501650870}
   - component: {fileID: 2807209642607641906}
-  - component: {fileID: 5012080906209181437}
+  - component: {fileID: 3980243516147484742}
   m_Layer: 0
   m_Name: Plateforme 3
   m_TagString: plateform
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &5012080906209181437
-EdgeCollider2D:
+--- !u!61 &3980243516147484742
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,9 +95,16 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.025472641, y: -0.12741089}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 23.62, y: 11.81}
+    newSize: {x: 23.62, y: 11.81}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 22.2445, y: 0.44553375}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -11.5488405, y: 0.29390335}
-  - {x: 8.12772, y: -0.017536163}
-  - {x: 10.857579, y: -0.022979736}

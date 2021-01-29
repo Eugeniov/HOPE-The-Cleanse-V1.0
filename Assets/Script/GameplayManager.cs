@@ -12,6 +12,7 @@ public class GameplayManager : MonoBehaviour
 
     public GameObject panelGameOver;
     public GameObject panelVictory;
+    public GameObject panelLaser;
     public bool startGame;
 
     void Awake()
@@ -35,6 +36,10 @@ public class GameplayManager : MonoBehaviour
     public void ShowGameOver() 
     {
         panelGameOver.SetActive(true);
+    }
+    public void Showlaser()
+    {
+        panelLaser.SetActive(true);
     }
     public void OnClick_Retry1() 
     { 

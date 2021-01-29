@@ -62,7 +62,7 @@ public class MovePlayer : MonoBehaviour
     {
         Debug.Log("color");
         yield return new WaitForSeconds(5f);
-        speed = speed + 3;
+        speed = speed + 2;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -70,14 +70,15 @@ public class MovePlayer : MonoBehaviour
         if (other.gameObject.tag == "obstacle")
         {
             Debug.Log("touchobstacle");
-            speed = speed - 3;
+            speed = speed - 2;
             StartCoroutine("takeobstacle");
         }
 
         if (other.gameObject.tag == "monster")
         {
-
+          
             Destroy(transform.gameObject);
+            GameplayManager.Instance.ShowGameOver();
         }
     }
 }

@@ -20,7 +20,7 @@ public class DestroyMonster : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            GameplayManager.Instance.Showlaser();
+            //GameplayManager.Instance.Showlaser();
             Destroy(monster);
         }
         

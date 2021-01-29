@@ -30,6 +30,8 @@ public class StarterManager1 : MonoBehaviour
     {
         panelcommand.SetActive(true);
     }
+
+
     public void Doquit()
 
     {

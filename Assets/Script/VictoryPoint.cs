@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VictoryPoint : MonoBehaviour
 {
-    public GameObject monster;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class VictoryPoint : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             GameplayManager.Instance.ShowVictoryPannel();
-            Destroy(monster);
+            
         }
         
     }

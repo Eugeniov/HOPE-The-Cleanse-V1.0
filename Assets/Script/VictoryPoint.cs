@@ -16,8 +16,12 @@ public class VictoryPoint : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        GameplayManager.Instance.ShowVictoryPannel();
+        if(other.gameObject.tag == "Player")
+        {
+            GameplayManager.Instance.ShowVictoryPannel();
+        }
+        
     }
 }

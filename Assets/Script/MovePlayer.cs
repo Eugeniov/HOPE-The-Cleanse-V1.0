@@ -30,7 +30,7 @@ public class MovePlayer : MonoBehaviour
         transform.Translate(Vector2.right * speed * Time.deltaTime);
         animator.SetBool("Start", true);
 
-        if(IsGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
+        if(IsGrounded == true && (Input.GetKeyDown(KeyCode.UpArrow)|| Input.GetKeyDown(KeyCode.Space)))
         {
             float jumpVelocity = 13.0f;
             rigidbody2d.velocity = Vector2.up * jumpVelocity;

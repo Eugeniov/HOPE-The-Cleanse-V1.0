@@ -39,14 +39,14 @@ public class MovePlayer : MonoBehaviour
             IsGrounded = false;
         }
         
-        if (IsGrounded == true && Input.GetKeyDown(KeyCode.DownArrow))
+        /*if (IsGrounded == true && Input.GetKeyDown(KeyCode.DownArrow))
         {
             animator.SetBool("glissade", true);
         }
         if (IsGrounded == true && Input.GetKeyUp(KeyCode.DownArrow))
         {
             animator.SetBool("glissade", false);
-        }
+        }*/
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -56,6 +56,28 @@ public class MovePlayer : MonoBehaviour
             IsGrounded = true;
             Debug.Log("IsGrounded");
             animator.SetBool("IsGrounded", true);
+        }
+    }
+    IEnumerator takeobstacle()
+    {
+        Debug.Log("color");
+        yield return new WaitForSeconds(5f);
+        speed = speed + 3;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "obstacle")
+        {
+            Debug.Log("touchobstacle");
+            speed = speed - 3;
+            StartCoroutine("takeobstacle");
+        }
+
+        if (other.gameObject.tag == "monster")
+        {
+
+            Destroy(transform.gameObject);
         }
     }
 }
